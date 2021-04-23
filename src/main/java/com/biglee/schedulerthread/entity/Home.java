@@ -1,10 +1,7 @@
 package com.biglee.schedulerthread.entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,6 +11,7 @@ import javax.persistence.*;
  * @description：
  * @version:
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,9 +21,9 @@ import javax.persistence.*;
 public class Home extends comEntity{
 
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     @Column
-    private Integer id;
+    private String id;
 
     @Column(length = 20)
     private String name;

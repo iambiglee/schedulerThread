@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @author ：DELL
@@ -20,13 +21,14 @@ public class repoController {
     @Resource
     HomeRepo homeRepo;
     @GetMapping(value = "save")
-    public String save() {
+    public Home save() {
         Home home=new Home();
         home.setCity("wu han");
         home.setName("han zhong");
         Timestamp timestamp = new Timestamp(new Date().getTime());
         home.setUpdateTime(timestamp);
+        home.setId(String.valueOf(UUID.randomUUID()));
         homeRepo.saveAndFlush(home);
-        return "login";
+        return home;
     }
 }

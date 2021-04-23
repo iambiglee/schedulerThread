@@ -1,8 +1,6 @@
 package com.biglee.schedulerthread.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import java.sql.Timestamp;
@@ -14,8 +12,6 @@ import java.sql.Timestamp;
  * @version:
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public abstract class comEntity {
     @Column(name = "updatetime")
     private Timestamp updateTime;
