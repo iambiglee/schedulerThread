@@ -43,7 +43,7 @@ class HomeRepoTest {
     }
 
     @Test
-    void createHome(){
+    void  createHome(){
         homeRepo.save(home);
         Assertions.assertTrue(homeRepo.existsById(uuid));
     }
